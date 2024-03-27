@@ -8,6 +8,23 @@ $(document).ready(function() {
         $('nav').slideToggle();
     })
 
+    $('#sobre-menu').click(function(){
+        $('nav').slideUp();
+        $('#about').show();
+    })
+    $('#destaque-menu').click(function(){
+        $('nav').slideUp();
+        $('#about').show();
+    })
+    $('#promocoes-menu').click(function(){
+        $('nav').slideUp();
+        $('#promocoes').show();
+    })
+    $('#contato-menu').click(function(){
+        $('nav').slideUp();
+        $('#contato').show();
+    })
+
     $('#telefone').mask('(00) 00000-0000')
 
     $('form').validate({
@@ -59,6 +76,5 @@ $(document).ready(function() {
         $('html').animate({
             scrollTop: destino.offset().top
         }, 1000)
-
     })
 })
