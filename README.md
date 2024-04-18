@@ -1,6 +1,8 @@
-# Site EBAC Motors
+# Site Ray Motors
 
 ## Apresentação do projeto
+
+https://github.com/guicamargo19/site_ebac_motors/assets/133445061/05d22a15-6609-43dd-bf0d-312eadf70105
 
 Projeto desenvolvido no curso de Full Stack Python da EBAC - Escola Britânica de Artes Criativas e Tecnologia.
 
