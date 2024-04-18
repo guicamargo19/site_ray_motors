@@ -10,19 +10,19 @@ $(document).ready(function() {
 
     $('#sobre-menu').click(function(){
         $('nav').slideUp();
-        $('#about').show();
+        $('#carrossel-imagens').show();
     })
     $('#destaque-menu').click(function(){
         $('nav').slideUp();
-        $('#about').show();
+        $('#space-2').show();
     })
     $('#promocoes-menu').click(function(){
         $('nav').slideUp();
-        $('#promocoes').show();
+        $('#space-3').show();
     })
     $('#contato-menu').click(function(){
         $('nav').slideUp();
-        $('#contato').show();
+        $('#space-4').show();
     })
 
     $('#telefone').mask('(00) 00000-0000')
@@ -56,7 +56,11 @@ $(document).ready(function() {
         // Função para lidar com o evento de submit do formulário
         submitHandler: function(form){
             $('#success').slideToggle();
-            // enviar formulário - mensagem de sucesso ou limpar o form
+            $('#nome').val("");
+            $('#telefone').val("");
+            $('#email').val("");
+            $('#veiculoInteresse').val("");
+            $('#mensagem').val("");
         },
         // Função para lidar com campos inválidos
         invalidHandler: function(evento, validador){
@@ -75,6 +79,6 @@ $(document).ready(function() {
 
         $('html').animate({
             scrollTop: destino.offset().top
-        }, 300)
+        }, 200)
     })
 })
