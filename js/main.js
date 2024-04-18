@@ -55,7 +55,7 @@ $(document).ready(function() {
         },
         // Função para lidar com o evento de submit do formulário
         submitHandler: function(form){
-            console.log(form)
+            $('#success').slideToggle();
             // enviar formulário - mensagem de sucesso ou limpar o form
         },
         // Função para lidar com campos inválidos
@@ -75,6 +75,6 @@ $(document).ready(function() {
 
         $('html').animate({
             scrollTop: destino.offset().top
-        }, 1000)
+        }, 300)
     })
 })

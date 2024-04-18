@@ -1,6 +1,6 @@
 # Site EBAC Motors
 
-<img src="assets/images/motors.png">
+## Apresentação do projeto
 
 Projeto desenvolvido no curso de Full Stack Python da EBAC - Escola Britânica de Artes Criativas e Tecnologia.
 

@@ -2,7 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -15,29 +16,44 @@ html {
     margin: 0 auto;
 }
 
+#space-2,
+#space-3,
+#space-4 {
+    height: 130px;
+}
+
+#about {
+    margin-top: 60px;
+}
+
 header {
     position: sticky;
     top: 0;
     left: 0;
     z-index: 1;
-}
-
-header,
-footer {
-    background-color: #192a56;
+    background-color: #326273;
     padding-top: 16px;
     color: #fff;
 }
 
-header > .container,
-footer > .container  {
+header > .container  {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 16px;
 }
 
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #e7e7e7;
+    text-decoration: none;
+}
+
 nav {
-    background-color: #575fcf;
+    background-color: #fff;
     padding: 16px 0;
     display: none;
 }
@@ -47,18 +63,31 @@ nav li {
     display: inline;
     margin-right: 16px;
     font-size: 18px;
-    font-weight: bold;
     text-transform: uppercase;
 }
 
 nav li a {
-    color: #fff;
+    color: #326273;
     text-decoration: none;
+    position: relative;
 }
 
-nav li a:hover {
-    color: lightsteelblue;
-}
+nav li a::after {
+    content: '';
+    position: absolute;
+    top: 28px;
+    height: 4px;
+    width: 0;
+    background: #fff;
+    left: 50%;
+    border-radius: 5px;
+    transition: all 300ms ease-in-out;
+  }
+  
+nav li a:hover::after {
+    width: 85%;
+    left: 7%;
+  }
 
 .menu-hamburguer {
     width: 32px;
@@ -77,35 +106,34 @@ span {
     display: flex;
 }
 
-#about {
-    margin-top: 40px;
-}
-
 #about img {
     max-width: 400px;
     margin-right: 24px;
+    border-radius: 4px;
 }
 
-section {
-    padding: 80px 0;
-}
-
-section h2 {
+#destaque h2,
+#promocoes h2,
+#contato h2 {
     margin-bottom: 16px;
+    margin-top: 16px;
 }
 
 .lista-veiculos {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 24px;
 }
 
 .lista-veiculos li {
     list-style: none;
-    max-width: 30%;
-    margin-bottom: 24px;
 }
 
 .lista-veiculos li img {
-    max-width: 100%;
+    width: 100%;
+    height: 200px;
+    border-radius: 4px;
 }
 
 .lista-veiculos li h3 {
@@ -113,11 +141,7 @@ section h2 {
 }
 
 .lista-veiculos li p {
-    height: 30px;
-}
-
-.item-central {
-    margin: 0 5%;
+    height: 80px;
 }
 
 button {
@@ -127,11 +151,15 @@ button {
     border: none;
     font-weight: bold;
     font-size: 16px;
-    background-color: #119759;
+    background-color: #326273;
     padding: 8px 0;
     font-style: italic;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #87baab;
 }
 
 .lista-veiculos li>strong {
@@ -149,8 +177,18 @@ button {
     font-size: 14px;
 }
 
+#contato .container {
+    background-color: #e8e8e8;
+    padding: 24px;
+}
+
+#contato h2 {
+    text-align: center;
+}
+
 form {
-    max-width: 360px;
+    max-width: 420px;
+    margin: 0 auto;
 }
 
 .form-campo {
@@ -158,7 +196,6 @@ form {
 }
 
 .form-campo label {
-    font-weight: bold;
     display: block;
 }
 
@@ -167,6 +204,7 @@ form {
     width: 100%;
     display: block;
     padding: 8px;
+    outline-color: #326273;
 }
 
 .form-campo textarea {
@@ -174,11 +212,62 @@ form {
     height: 120px;
 }
 
-footer li {
-    list-style: none;
-    margin-left: 16px;
+.form-campo #veiculoInteresse {
+    font-weight: bold;
+    color: #326273;
 }
 
-footer li img{
-    height: 32px;
+#success {
+    padding: 4px;
+    height: 36px;
+    padding-top: 8px;
+    display: none;
+    margin-top: 12px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #87baab;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.direitos {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.direitos div {
+    padding: 6px;
+}
+
+.direitos a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.direitos a:hover {
+    text-decoration: none;
+    color: #708090;
+}
+
+footer {
+    margin-top: 40px;
+    background-color: #326273;
+    color: #fff;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+}
+
+.flex img {
+    width: 32px;
+    padding: 4px;
+}
+
+.flex img:hover {
+    transform: scale(1.1);
 }
